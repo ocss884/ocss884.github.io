@@ -1,11 +1,11 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               Ed.
-tagline:             'a jekyll theme for minimal editions'
+title:               Ocss
+tagline:             'unexpected road to my unexpected future'
 description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
 url:                 'http://minicomp.github.io'
-baseurl:             '/ed'
+baseurl:             ''
 
 # About/contact
 author:
@@ -49,7 +49,14 @@ exclude:
   - Gemfile.lock
   - backstop_data
   - backstop.json
-
+# Plugins
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
 # Theme
 # (Used for local or custom-server deployments)
 # Uncomment the `theme` line if using the Ed. theme gem on your own computer or server.
