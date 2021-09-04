@@ -81,20 +81,19 @@ body {
 
 .container {
   max-width: 32rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
 }
 
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 44rem;
   }
 }
 
 /* Links */
 a, .text-title a {
+  font-family: $main-font;
   color: $link-color;
   text-decoration: none;
 }
@@ -107,7 +106,6 @@ a:focus {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font;
   margin-bottom: .5rem;
   font-weight: normal;
   color: $heading-color;
@@ -801,4 +799,106 @@ li.prose-indent {
 .theme-base-brown .sidebar-toggle,
 .theme-base-brown .related-posts li a:hover {
   color: #8f5536;
+}
+
+div.loader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 1em 0 0 0;
+    font-size: 16px;
+  }
+}
+
+$color: black;
+$size: 100px;
+$borderWidth: 4px;
+$redWidth: 27%;
+$orangeHeight: 50%;
+$whiteWidth: 23%;
+$s1: calc(100%/3);
+$s2: calc(200%/3);
+$s3: 100%;
+
+div.logo {
+  width: $size;
+  height: $size;
+  // border: $borderWidth solid $color;
+  box-sizing: border-box;
+  position: relative;
+  background-color: white;
+
+  & > div {
+    position: absolute;
+  }
+
+  div.white {
+    border: $borderWidth solid $color;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  div.red {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #EA5664;
+    animation: red 12s steps(1) infinite;
+  }
+}
+@keyframes red {
+  0% {width: $s1;left: 0;bottom: $s2;}
+  2.5% {width: $s1;left: $s1;bottom: $s2;}
+  5% {width: $s1;left: $s2;bottom: $s2;}
+  7.5% {width: $s1;left: 0;bottom: $s1;}
+  10% {width: $s1;left: $s1;bottom: $s1;}
+  12.5% {width: $s1;left: $s2;bottom: $s1;}
+  15% {width: $s1;left: 0;bottom: 0;}
+  17.5% {width: $s1;left: $s1;bottom: 0;}
+  20% {width: $s1;left: $s2;bottom: 0;}
+  22.5% {width: $s2;left: 0;bottom: $s2;}
+  25% {width: $s2;left: $s1;bottom: $s2;}
+  27.5% {width: $s2;left: 0;bottom: $s1;}
+  30% {width: $s2;left: $s1;bottom: $s1;}
+  32.5% {width: $s2;left: 0;bottom: 0;}
+  35% {width: $s2;left: $s1;bottom: 0;}
+  37.5% {width: $s3;left: 0;bottom: $s2;}
+  40% {width: $s3;left: 0;bottom: $s1;}
+  42.5% {width: $s3;left: 0;bottom: 0;}
+  45% {width: $s1;left: 0;top: $s1;bottom: $s1;}
+  47.5% {width: $s1;left: $s1;top: $s1;bottom: $s1;}
+  50% {width: $s1;left: $s2;top: $s1;bottom: $s1;}
+  52.5% {width: $s1;left: 0;top: $s1;bottom: 0;}
+  55% {width: $s1;left: $s1;top: $s1;bottom: 0;}
+  57.5% {width: $s1;left: $s2;top: $s1;bottom: 0;}
+  60% {width: $s2;left: 0;top: $s1;bottom: $s1;}
+  62.5% {width: $s2;left: $s1;top: $s1;bottom: $s1;}
+  65% {width: $s2;left: 0;top: $s1;bottom: 0;}
+  67.5% {width: $s2;left: $s1;top: $s1;bottom: 0;}
+  70% {width: $s3;left: 0;top: $s1;bottom: $s1;}
+  72.5% {width: $s3;left: 0;top: $s1;bottom: 0;}
+  75% {width: $s1;left: 0;top: $s2;bottom: 0;}
+  77.5% {width: $s1;left: $s1;top: $s2;bottom: 0;}
+  80% {width: $s1;left: $s2;top: $s2;bottom: 0;}
+  82.5% {width: $s2;left: 0;top: $s2;bottom: 0;}
+  85% {width: $s2;left: $s1;top: $s2;bottom: 0;}
+  87.5% {width: $s3;left: 0;top: $s2;bottom: 0;}
+  90% {}
+  92.5% {}
+  95% {}
+  97.5% {}
+  100% {}
 }

@@ -1,20 +1,20 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               Ocss
-tagline:             'unexpected road to my unexpected future'
-description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
-url:                 'http://minicomp.github.io'
+title:               OZONE
+tagline:             
+description:         ''
+url:                 'http://ocss884.github.io'
 baseurl:             ''
 
 # About/contact
 author:
-  name:              Alex Gil
-  url:               https://twitter.com/elotroalex
-  email:             colibri.alex@gmail.com
+  name:              Junrong Lin
+  url:               ''
+  email:             'junrong.lin@duke.edu'
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
-color-scheme:
+color-scheme: cyan
 
 # Permalinks
 permalink: pretty
@@ -39,7 +39,6 @@ kramdown:
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 # Exclusions from the final site
 exclude:
   - optional
@@ -49,6 +48,7 @@ exclude:
   - Gemfile.lock
   - backstop_data
   - backstop.json
+  
 # Plugins
 jekyll_admin:
   hidden_links:
